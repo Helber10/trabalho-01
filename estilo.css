@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Markazi+Text:wght@400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{
+	margin: 0; padding: 0;
+}
+
+body{
+
+}
+
+section{
+	display:grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 7vh 26vh 60vh 7vh;
+	grid-template-areas:"nt nt nt"
+						"c c c"
+						"m p a" 
+						"r r r"
+
+}
+#nav-topo{
+	background-color: #F5F5DC;
+	color: #F08080;
+	grid-area: nt;
+	width: 100%;
+
+
+}
+
+
+ul{
+  display: flex;
+  height: 100%;
+  justify-content:flex-end;
+  align-items: center;
+
+
+
+}
+
+
+
+li{
+ list-style: none;
+ margin-right: 15px;
+}
+
+#header-top{
+	background-color: #aedf77;
+	grid-area: c;
+	width: 100%;
+
+}
+h1{
+	text-align: center;
+	color: #050000;
+	font-size: 100px;
+	font-family: 'Oswald';
+	
+}
+
+nav{
+	
+	background-color:#06a14c ;
+	grid-area:auto;
+
+
+}
+
+main{
+	background-color: #06a14c ;
+	grid-area:;
+	display:flex;
+	flex-wrap:wrap;
+
+
+}
+
+aside{
+	width: 100%;
+	height: 100%;
+	background-color: #06a14c ;
+	grid-area: auto;
+	
+}
+
+#tempo a{
+    text-align-last: center;
+	color:#03001c;
+	font: 1.2rem 'Markazi',sans-serif;
+}
+.cronometro{
+	width: 100%;
+	height: 60px;
+	background-color:#D9D9D9 ;
+	position: relative;
+	top: 1px;
+	right: 10px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px #ccc;
+	
+}
+.button1{
+	width:100px;
+	height: 50px;
+	margin: 5% ;
+	background-color:#06a14c;
+	padding: px;
+	border-radius: 16px;
+	box-shadow: 0 0 0px #ccc;
+	
+}
+.button2{
+	width:100px;
+	height: 50px;
+	margin: 5% ;
+	background-color:#f00b0b;
+	padding: px;
+	border-radius: 16px;
+	box-shadow: 0 0 0px #ccc;
+	
+}
+.button3{
+	width:100px;
+	height: 50px;
+	margin: 5% ;
+	background-color:#D0EC21;
+	padding: px;
+	border-radius: 16px;
+	box-shadow: 0 0 0px #ccc;
+	
+}
+.img-campo{
+	width: 100%;
+	height: 38px;
+	right: px;
+	background-color: ;
+	position:;
+
+}
+
+
+.img-campo1{
+	width: 100%;
+	height: 250px;
+	background-color: ;
+	position:;
+
+}
+.img-campo2{
+	width: 100%;
+	height: 250px;
+}
+
+#div-tabela{
+	width: 180px;
+	height: 180px;
+	border: none solid #bfa530;
+	background-color: #D9D9D9;
+	margin: 20px;
+	right: px;
+
+
+}
+
+
+
+	
+		/* Formulario */
+
+
+#box-fomulario{
+	width: 100%;
+	height: 200px;
+	background-color: ;
+	position: relative;
+	top: 1px;
+	right: 10px;
+	border-radius: 40px;
+
+}
+
+
+
+
+form{
+	width: 350px;
+	margin: 5% ;
+	background-color:;
+	padding: 10px;
+	border-radius: 16px;
+	box-shadow: 0 0 0px #ccc;
+}
+
+label{
+	font: 1.1rem 'Poppins', sans-serif;
+	color: #212121;
+}
+
+input{
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+	font: 1rem 'Poppins', sans-serif;
+	border: 1px solid #5bac2d;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+
+#div-cadastra{
+	width: 90%;
+	height: 100%;
+	background-color: #0f9c39;
+	margin: 10px;
+
+}
+
+input[type="submit"]{
+	background-color: #8BC34A;
+	color: #fff;
+	border: none;
+}
+
+input[type="reset"]{
+	background-color: #F47E7E;
+}
+
+/*roda pe*/
+
+footer{
+	width: 100%;
+	height: 50px;
+	grid-area: r;
+	background-color: #06a14c;
+
+}
+
+#bt-topo{
+	width: 70px;
+	height: 70px;
+	background-color: #D0EC21;
+	border-radius: 35px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}
+
+
+#img-contato{
+	width: 100%;
+	border-radius: 35px;
+}
+
+
+
+#bt-flex p ,#bt-flex a{
+    text-align-last: center;
+	color:#03001c;
+	font: 1.2rem 'Markazi',sans-serif;
+}
+
+
+#bt-flex{
+	width: 100%;
+	height: 60px;
+	background-color:#ffff ;
+	position: fixed;
+	border-right: 35px;
+	position: fixed;
+	bottom: 30px;
+	right: 0;
+	
+}
+
+ .img-contatos{
+ 	width: 40px;
+ 	height: 30px;
+ }
+
+footer{
+	background-color: #212121;
+	padding: 20px;
+	display: flex;
+	gap: 10px;
+	margin:50px 0 ;
+}
+footer p, footer a{
+	text-align: center;
+	color:;
+
+}

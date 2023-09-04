@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	 
+	
+	 
+</head>
+<body>
+	<section>
+		<nav id="nav-topo">
+			<ul>
+				<li><a class="menu"href="#">HOME</a></li>
+				<li><a class="menu"href="#" >JOGOS</a></li>
+				<li><a class="menu"href="#" >TABELA</a></li>
+			</ul>
+		</nav>
+		<header id="header-top">
+			<h1><marquee> PELADEIROS </marquee></h1>
+		</header>
+		<nav>
+			<section id="box-fomulario">
+				 <form name="Cadastro" method="" action="">
+				 <label for="nome">NOME DO ATLETA</label>
+				  <input type="text" id="nomeid" placeholder="nome" required="required" name="nome"/>	
+                   
+				     <input type="submit" class="cadastra" onclick="CADASTRA();" value="CADASTRAR" />
+				      <input type="reset" class="cancelar" onclick="CANCELAR();" value="CANCELAR" />
+				 </form>
+		</section>
+		</nav>
+		<main>
+		
+
+			<div id="div-tabela"><img class="img-campo1" src="img/campo1.webp"alt="">Time 1</div>	
+			<div id="div-tabela"><img class="img-campo1" src="img/campo1.webp"alt="">Time 2</div>
+			<div id="div-tabela"><img class="img-campo1" src="img/campo1.webp"alt="">Time 3</div>
+		
+		</main>
+		<aside id="div-placa"><img class="img-campo" src="img/campo.png"alt="">	
+			<h2>Cronômetro</h2>
+			<div id="cronometro">0:00</div>
+			<section class="cronometro">
+				<button id="iniciar" class="button1">Iniciar</button>
+				<button id="pausar" class="button2">Pausar</button>
+				<button id="reiniciar" class="button3">Reiniciar</button>
+			</section>
+		
+		</aside>
+
+
+		<footer>
+		  
+		 
+	   </footer>
+		   <div id="bt-flex">
+			<a href="https://www.instagram.com" target="_blank">
+				<img class="img-contatos" src="img/instalog.png"/></a>
+					  
+			   <p>Desenvolvido por <a href="https://www.instagram.com" target="_blank"></a>Helber Rodrigues 2023</p>
+		   </div>
+		   <div id="bt-topo">
+			   <a href="https://web.whatsapp.com/" target="_blank">
+			   <img id="img-contato" src="img/whatsapp.png"alt=""></a>
+		   </div>
+
+	</section>
+	<script>
+		function CADASTRA() {
+			var nome = document.getElementById("nomeid");
+			if (nome.value != "") {
+				alert ('Atleta '  + nome.value +  ' cadastrado com sucesso ');
+			}
+		}
+		let cronometro;
+        let segundos = 0;
+        let minutos = 0;
+        let rodando = false;
+
+        function atualizarCronometro() {
+            document.getElementById("cronometro").textContent = minutos + ":" + (segundos < 10 ? "0" : "") + segundos;
+        }
+
+        document.getElementById("iniciar").addEventListener("click", function () {
+            if (!rodando) {
+                cronometro = setInterval(function () {
+                    segundos++;
+                    if (segundos === 60) {
+                        segundos = 0;
+                        minutos++;
+                    }
+                    atualizarCronometro();
+                }, 1000);
+                rodando = true;
+            }
+        });
+
+        document.getElementById("pausar").addEventListener("click", function () {
+            clearInterval(cronometro);
+            rodando = false;
+        });
+
+        document.getElementById("reiniciar").addEventListener("click", function () {
+            clearInterval(cronometro);
+            segundos = 0;
+            minutos = 0;
+            atualizarCronometro();
+            rodando = false;
+        })
+
+	
+		</script>
+</body>
+</html>
